@@ -1,0 +1,10 @@
+name: shiny-table
+title:
+username: lukmanaj
+account: lukmanaj
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12217439
+bundleId: 8773610
+url: https://lukmanaj.shinyapps.io/shiny-table/
+version: 1

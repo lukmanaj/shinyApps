@@ -1,0 +1,12 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "/home/lukmanaj/python-shiny",
+        "app_url": "https://lukmanaj.shinyapps.io/python-shiny1/",
+        "app_id": 12216457,
+        "app_guid": null,
+        "title": "python-shiny",
+        "app_mode": "python-shiny",
+        "app_store_version": 1
+    }
+}

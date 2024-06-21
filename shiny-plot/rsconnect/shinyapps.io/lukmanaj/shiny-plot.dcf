@@ -1,0 +1,10 @@
+name: shiny-plot
+title:
+username: lukmanaj
+account: lukmanaj
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12216068
+bundleId: 8772521
+url: https://lukmanaj.shinyapps.io/shiny-plot/
+version: 1
