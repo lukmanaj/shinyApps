@@ -18,46 +18,46 @@ red_plot <- ggplot(soccer, aes(x = yellowCards, y = country)) +
 
 goals_plot <- ggplot(soccer, aes(x = goals, y = country)) +
   geom_bar(stat = "identity", fill = "grey40") +
-  xlab("Total number of goalss") +
+  xlab("Total number of goals") +
   ylab("Country") +
   theme_minimal()
 
 daytime_fn <- function(match){
-  filter(soccer, match_no == match) %>%
-    mutate(datetime = paste(date, hour)) %>%
+  filter(soccer, match_no == match) |>
+    mutate(datetime = paste(date, hour)) |>
     pull(datetime)
 }
 
 
 venue_fn <- function(match){
-  filter(soccer, match_no == match) %>%
+  filter(soccer, match_no == match) |>
     pull(venue)
 }
 
 
 grp_fn <- function(match){
-  filter(soccer, match_no == match) %>%
+  filter(soccer, match_no == match) |>
     pull(group)
 }
 
 
 team1_fn <- function(match){
-  filter(soccer, match_no == match) %>%
+  filter(soccer, match_no == match) |>
     pull(`1`)
 }
 
 team2_fn <-  function(match){
-  filter(soccer, match_no == match) %>%
+  filter(soccer, match_no == match) |>
     pull(`2`)
 }
 
 score1_fn <-  function(match){
-  filter(soccer, match_no == match) %>%
+  filter(soccer, match_no == match) |>
     pull(`1_goals`)
 }
 
 score2_fn <- function(match){
-  filter(soccer, match_no == match) %>%
+  filter(soccer, match_no == match) |>
     pull(`1_goals`)
 }
 
