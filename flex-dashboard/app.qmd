@@ -1,39 +1,21 @@
-<!-- ---
+---
 title: "Bike Shares Daily"
 author: "Lukman Aliyu"
 format: dashboard
 orientation: columns
 vertical_layout: fill
 storyboard: true
---- -->
-
-
 ---
 
-title: "Bike Shares Daily"
-author: "Lukman Aliyu"
-format: 
-  html: 
-    code-tools: true
-    embed-resources: true
-    self-contained: true
-orientation: columns
-vertical_layout: fill
-storyboard: true
----
+
+
 
 
 
 ```{r setup, include=FALSE}
-library(readr)
 library(leaflet)
 library(DT)
 library(tidyverse)
-library(lubridate)
-library(plotly)
-library(ragg) # Load ragg for alternative graphics device
-
-knitr::opts_chunk$set(dev = "ragg_png")
 
 trips_df <- read_csv('https://assets.datacamp.com/production/repositories/1448/datasets/1f12031000b09ad096880bceb61f6ca2fd95e2eb/sanfran_bikeshare_joined_oneday.csv')
 ```
@@ -47,13 +29,11 @@ trips_per_bike_df <- trips_df %>%
   summarize(n_trips = n()) %>%
   arrange(desc(n_trips)) 
 
-bike_plot <- trips_per_bike_df %>%
+trips_per_bike_df %>%
   ggplot(aes(x = n_trips)) +
   geom_histogram(binwidth = 1) +
   ylab('') +
   xlab('Trips per bike') 
-
-ggplotly(bike_plot)
 
 ```
 
